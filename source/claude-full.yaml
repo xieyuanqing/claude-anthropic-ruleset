@@ -1,0 +1,60 @@
+# Full Claude / Anthropic routing rule-set
+# Source basis: https://ip.net.coffee/claude/site.html
+# Maintainer note: keep this file human-editable, then run `python3 scripts/generate.py`.
+
+name: claude-full
+description: Full Claude Code / Anthropic routing rules for sing-box compatible clients.
+
+domain_suffix:
+  # Core Anthropic / Claude domains
+  - anthropic.com
+  - claude.ai
+  - claude.com
+  - clau.de
+  - claudemcpclient.com
+  - claudemcpcontent.com
+  - claudeusercontent.com
+
+  # Monitoring / feature flags
+  - sentry.io
+  - statsigapi.net
+
+  # Support / third-party widgets
+  - intercom.io
+  - intercomcdn.com
+
+domain:
+  # CDN and static resources
+  - servd-anthropic-website.b-cdn.net
+  - anthropic.com.cdn.cloudflare.net
+
+  # Auth / content
+  - anthropic.auth0.com
+  - anthropic-com.ghost.io
+
+  # Monitoring endpoints not covered by normal suffix rules
+  - browser-intake-us5-datadoghq.com
+
+  # Support / analytics widgets
+  - cdn.usefathom.com
+
+domain_keyword:
+  # Datadog regional endpoint fallback, e.g. browser-intake-us3-datadoghq.com
+  - datadog
+  # Fraud / risk telemetry fallback
+  - sift
+
+ip_cidr:
+  # Anthropic IPv4 / IPv6 ranges
+  - 160.79.104.0/21
+  - 2607:6bc0::/32
+
+# sing-box JSON rule-set does not represent ASN directly.
+# Keep this for clients that support IP-ASN rules separately.
+ip_asn:
+  - 399358
+
+# Optional companion rule for clients supporting geosite categories.
+# Usually configure this separately if the app supports NTP/UDP routing.
+geosite:
+  - category-ntp
