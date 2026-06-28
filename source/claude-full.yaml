@@ -18,6 +18,7 @@ domain_suffix:
   # Monitoring / feature flags
   - sentry.io
   - statsigapi.net
+  - datadoghq.com
 
   # Support / third-party widgets
   - intercom.io

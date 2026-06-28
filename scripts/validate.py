@@ -19,6 +19,7 @@ EXPECTED = {
         "claudeusercontent.com",
         "sentry.io",
         "statsigapi.net",
+        "datadoghq.com",
         "intercom.io",
         "intercomcdn.com",
     },

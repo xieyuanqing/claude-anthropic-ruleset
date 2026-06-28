@@ -50,6 +50,7 @@ servd-anthropic-website.b-cdn.net
 - `anthropic-com.ghost.io`
 - `anthropic.com.cdn.cloudflare.net`
 - `browser-intake-us5-datadoghq.com`
+- `datadoghq.com`
 - `statsigapi.net`
 - `intercom.io` / `intercomcdn.com`
 - `cdn.usefathom.com`
